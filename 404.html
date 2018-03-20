@@ -120,6 +120,25 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
+                <h3 class="media-heading">Hugo: 在 Github 上部署 blog</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
+关于 User Pages 和 Project Pages 请参照 Github。
+部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl + C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
                 <h3 class="media-heading">Leetcode 2. Add Two Numbers</h3>
               </a>
@@ -143,7 +162,7 @@ Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</div>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         1 posts found
+         2 posts found
       </p>
     </div>
   </div>

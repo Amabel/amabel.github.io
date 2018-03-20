@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Leetcode 2. Add Two Numbers</title>
+    <title>Hugo: 在 Github 上部署 blog</title>
     <meta name="author" content="Weibin Luo">
     <meta name="keywords" content="">
 
@@ -28,21 +28,21 @@
     
 
     
-    <meta name="description" content="Question  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
-    <meta property="og:description" content="Question  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
+    <meta name="description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
+关于 User Pages 和 Project Pages 请参照 Github。
+部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
+    <meta property="og:description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
+关于 User Pages 和 Project Pages 请参照 Github。
+部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Leetcode 2. Add Two Numbers">
-    <meta property="og:url" content="/2017/06/leetcode-2.-add-two-numbers/">
+    <meta property="og:title" content="Hugo: 在 Github 上部署 blog">
+    <meta property="og:url" content="/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
     <meta property="og:site_name" content="YuaNdiFuhuO">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="YuaNdiFuhuO">
-    <meta name="twitter:description" content="Question  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
+    <meta name="twitter:description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
+关于 User Pages 和 Project Pages 请参照 Github。
+部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
     
     
 
@@ -205,15 +205,15 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Leetcode 2. Add Two Numbers
+      Hugo: 在 Github 上部署 blog
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-06-18T22:13:34&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-03-21T00:15:10&#43;09:00">
         
-  June 18, 2017
+  March 21, 2018
 
       </time>
     
@@ -222,7 +222,7 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
   
     <span>in</span>
     
-      <a class="category-link" href="https://amabel.github.io/categories/leetcode">Leetcode</a>
+      <a class="category-link" href="https://amabel.github.io/categories/hugo">hugo</a>
     
   
 
@@ -234,87 +234,58 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
             <div class="main-content-wrap">
               
 
-<h1 id="question">Question</h1>
+<h1 id="关于-github-pages">关于 GitHub Pages</h1>
 
-<blockquote>
-<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+<p>GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。</p>
 
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>关于 User Pages 和 Project Pages 请参照 <a href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">Github</a>。</p>
 
-<p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
-
-<p>Output: 7 -&gt; 0 -&gt; 8</p>
-</blockquote>
-
-<p><strong>view on <a href="https://leetcode.com/problems/add-two-numbers/#/description">leetcode.com</a></strong></p>
-
-<hr />
-
-<h1 id="solution">Solution</h1>
-
-<p>如同在纸上进行加法运算（如图），只要把每一位相加，并且考虑进位的情况即可。</p>
-
-<p>需要注意的是 <code>ListNode</code> 的开头表示的是<strong>最低位</strong>。</p>
-
-<p><a href="http://res.cloudinary.com/luoweibinb/image/upload/v1521467842/hugo/leetcode/2-add-two-numbers.png"><img src="http://res.cloudinary.com/luoweibinb/image/upload/v1521467842/hugo/leetcode/2-add-two-numbers.png" alt="clue-ap1" /></a></p>
-
-<p>在上图中首先使用 2 个指针来分别指向 2 个 <code>ListNode</code>，把每一位进行加法运算后，得到该位的值以及 <code>carry</code> 的值，并把指针指向下一位，直到下一位是 <code>null</code> 为止。</p>
-
-<p>如下图，有几种特殊情况需要特别考虑：</p>
+<h1 id="部署步骤">部署步骤:</h1>
 
 <ol>
-<li>2 个 <code>ListNode</code> 的长度不同（在这种情况下某一个指针会先指向 <code>null</code>）</li>
-<li>某 1 个 <code>ListNode</code> 为 <code>null</code>，此时结果应为另一个 <code>ListNode</code></li>
-<li>在最高位（链表的最末一位）运算后仍然有 <code>carry</code></li>
+<li>首先在 GitHub 上创建<code>&lt;YOUR-PROJECT&gt;</code>项目（例：<code>blog</code>），与 Hugo 相关的文件要放在这个项目里</li>
+<li>在 GitHub 上创建<code>&lt;USERNAME&gt;.github.io</code>项目，这个项目用来放编译后的静态网页（public下的内容）</li>
+<li><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code></li>
+<li>（可选）确保 Hugo 可以在本地运行。<code>hugo server</code>然后在 <a href="http://localhost:1313">http://localhost:1313</a> 上查看</li>
+<li>（可选）确认后停止 hugo (Ctrl + C)，并清除 hugo 下的 public 文件夹<code>rm -rf public</code></li>
+<li><code>git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code> 在 public 下创建子模块并关联到<code>&lt;USERNAME&gt;.github.io.git</code>项目中</li>
 </ol>
 
-<p><a href="https://res.cloudinary.com/luoweibinb/image/upload/v1521467145/hugo/leetcode/2-add-two-numbers-2.png"><img src="https://res.cloudinary.com/luoweibinb/image/upload/v1521467145/hugo/leetcode/2-add-two-numbers-2.png" alt="clue-ap2" /></a></p>
+<h1 id="部署自动化">部署自动化</h1>
 
-<h1 id="复杂度">复杂度</h1>
+<p>将以下代码保存到<code>deploy.sh</code>放入 hugo 目录下：</p>
 
-<ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(n)</li>
-</ul>
+<pre><code>#!/bin/bash
 
-<p>时间和空间复杂度都与两个 <code>ListNode</code> 中较长的那个的长度有关</p>
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
 
-<h1 id="java代码">Java代码</h1>
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
 
-<p><a href="https://github.com/Amabel/leetcode/blob/master/002.%20Add%20Two%20Numbers/src/solutions/AddTwoNumbers.java">LeetCode 2. Add Two Numbers</a></p>
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
 
-<pre><code class="language-java">public ListNode solution(ListNode l1, ListNode l2) {
-    // result 作为 dummy 头节点，最终返回 result.next
-    ListNode result = new ListNode(0);
-    ListNode p = l1, q = l2;
-    // 当前位的指针
-    ListNode current = result;
-    int carry = 0;
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
 
-    while (null != p || null != q) {
-        // 若指针为 null 则表示当前位为 0
-        // 这是为了应对 2 个链表长度不同，某一个链表先结束的情况
-        int x = (null != p) ? p.val : 0;
-        int y = (null != q) ? q.val : 0;
-        int sum = carry + x + y;
-        carry = sum / 10;
-        current.next = new ListNode(sum % 10);
-        current = current.next;
-        if (null != p) {
-            p = p.next;
-        }
-        if (null != q) {
-            q = q.next;
-        }
-    }
-    // 别忘记处理最后的 carry
-    if (carry &gt; 0) {
-        current.next = new ListNode(carry);
-    }
-    return result.next;
-}
+# Push source and build repos.
+git push origin master
 
+# Come Back up to the Project Root
+cd ..
 </code></pre>
+
+<p>使用<code>./deploy.sh &quot;Your optional commit message&quot;</code>实现提交和推送 public 下的静态网页</p>
+
+<h1 id="参考">参考</h1>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
 
               
             </div>
@@ -327,9 +298,9 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/leetcode/">Leetcode</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/hugo/">hugo</a>
 
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/algorithm/">Algorithm</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/blog/">blog</a>
 
                   </div>
                 
@@ -342,7 +313,7 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/" data-tooltip="Hugo: 在 Github 上部署 blog">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -350,7 +321,7 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="Leetcode 2. Add Two Numbers">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -368,19 +339,19 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -428,7 +399,7 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/" data-tooltip="Hugo: 在 Github 上部署 blog">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -436,7 +407,7 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="Leetcode 2. Add Two Numbers">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -454,19 +425,19 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -496,19 +467,19 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4)">
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2017%2F06%2Fleetcode-2.-add-two-numbers%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fhugo-%25E5%259C%25A8-github-%25E4%25B8%258A%25E9%2583%25A8%25E7%25BD%25B2-blog%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2017%2F06%2Fleetcode-2.-add-two-numbers%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fhugo-%25E5%259C%25A8-github-%25E4%25B8%258A%25E9%2583%25A8%25E7%25BD%25B2-blog%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2017%2F06%2Fleetcode-2.-add-two-numbers%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fhugo-%25E5%259C%25A8-github-%25E4%25B8%258A%25E9%2583%25A8%25E7%25BD%25B2-blog%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -646,9 +617,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/amabel.github.io\/2017\/06\/leetcode-2.-add-two-numbers\/';
+          this.page.url = 'https:\/\/amabel.github.io\/2018\/03\/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog\/';
           
-            this.page.identifier = '\/2017\/06\/leetcode-2.-add-two-numbers\/'
+            this.page.identifier = '\/2018\/03\/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog\/'
           
         };
         (function() {

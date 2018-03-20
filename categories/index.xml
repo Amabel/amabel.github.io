@@ -10,5 +10,14 @@
 	<atom:link href="https://amabel.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Leetcode</title>
+      <link>https://amabel.github.io/categories/leetcode/</link>
+      <pubDate>Sun, 18 Jun 2017 22:13:34 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

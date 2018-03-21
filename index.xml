@@ -26,19 +26,18 @@
       <pubDate>Sun, 18 Jun 2017 22:13:34 +0900</pubDate>
       
       <guid>https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/</guid>
-      <description>&lt;h1 id=&#34;question&#34;&gt;Question&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;You are given two &lt;strong&gt;non-empty&lt;/strong&gt; linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
-
-&lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;/p&gt;
-
-&lt;p&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)&lt;/p&gt;
-
-&lt;p&gt;Output: 7 -&amp;gt; 0 -&amp;gt; 8&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;用链表接收 2个非负整数求和后把结果用链表返回
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 3. Longest Substring without Repeating Characters</title>
+      <link>https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/</link>
+      <pubDate>Mon, 12 Jun 2017 18:32:57 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/</guid>
+      <description>&lt;p&gt;最长非重复的子字符串
+&lt;/p&gt;</description>
     </item>
     
   </channel>

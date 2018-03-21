@@ -22,27 +22,21 @@
     <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
     <title>Hugo: 在 Github 上部署 blog</title>
     <meta name="author" content="Weibin Luo">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="hugo, deploy">
 
     <link rel="icon" href="https://amabel.github.io/favicon.png">
     
 
     
-    <meta name="description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
-关于 User Pages 和 Project Pages 请参照 Github。
-部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
-    <meta property="og:description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
-关于 User Pages 和 Project Pages 请参照 Github。
-部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
+    <meta name="description" content="介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上">
+    <meta property="og:description" content="介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Hugo: 在 Github 上部署 blog">
     <meta property="og:url" content="/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
     <meta property="og:site_name" content="YuaNdiFuhuO">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="YuaNdiFuhuO">
-    <meta name="twitter:description" content="关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
-关于 User Pages 和 Project Pages 请参照 Github。
-部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl &#43; C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：">
+    <meta name="twitter:description" content="介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上">
     
     
 
@@ -53,6 +47,8 @@
       <meta property="og:image" content="http://res.cloudinary.com/luoweibinb/image/upload/v1521463221/hugo/20180319200458.jpg">
     
 
+    
+      <meta property="og:image" content="http://res.cloudinary.com/luoweibinb/image/upload/v1521592297/hugo/hugo-logo-h.png">
     
     
     
@@ -232,26 +228,29 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上</p>
+
+<p>
+<img src="http://res.cloudinary.com/luoweibinb/image/upload/v1521591724/hugo/hugo-logo.png" alt="Hugo" /></p>
 
 <h1 id="关于-github-pages">关于 GitHub Pages</h1>
 
-<p>GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。</p>
+<p>GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下怎么把 Hugo 部署在 User Pages 上。</p>
 
-<p>关于 User Pages 和 Project Pages 请参照 <a href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">Github</a>。</p>
+<p>关于 User Pages 和 Project Pages 参照 <a href="https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages">Github</a>。</p>
 
-<h1 id="部署步骤">部署步骤:</h1>
+<h1 id="准备工作">准备工作</h1>
 
 <ol>
-<li>首先在 GitHub 上创建<code>&lt;YOUR-PROJECT&gt;</code>项目（例：<code>blog</code>），与 Hugo 相关的文件要放在这个项目里</li>
+<li>首先在 GitHub 上创建<code>&lt;YOUR-PROJECT&gt;</code>项目（例：<code>blog</code>），和 Hugo 相关的文件会放在这个项目里</li>
 <li>在 GitHub 上创建<code>&lt;USERNAME&gt;.github.io</code>项目，这个项目用来放编译后的静态网页（public下的内容）</li>
 <li><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code></li>
 <li>（可选）确保 Hugo 可以在本地运行。<code>hugo server</code>然后在 <a href="http://localhost:1313">http://localhost:1313</a> 上查看</li>
-<li>（可选）确认后停止 hugo (Ctrl + C)，并清除 hugo 下的 public 文件夹<code>rm -rf public</code></li>
+<li>（可选）确认后停止 Hugo <code>Ctrl + C</code>，并清除 Hugo 下的 public 文件夹<code>rm -rf public</code></li>
 <li><code>git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code> 在 public 下创建子模块并关联到<code>&lt;USERNAME&gt;.github.io.git</code>项目中</li>
 </ol>
 
-<h1 id="部署自动化">部署自动化</h1>
+<h1 id="自动提交并-push-到-github">自动提交并 push 到 GitHub</h1>
 
 <p>将以下代码保存到<code>deploy.sh</code>放入 hugo 目录下：</p>
 
@@ -281,12 +280,11 @@ git push origin master
 cd ..
 </code></pre>
 
-<p>使用<code>./deploy.sh &quot;Your optional commit message&quot;</code>实现提交和推送 public 下的静态网页</p>
+<p>用<code>./deploy.sh &quot;Your optional commit message&quot;</code>实现提交和推送 public 下的静态网页</p>
 
 <h1 id="参考">参考</h1>
 
 <p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
-
               
             </div>
           </div>
@@ -321,7 +319,7 @@ cd ..
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="Leetcode 2. Add Two Numbers">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="LeetCode 2. Add Two Numbers">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -407,7 +405,7 @@ cd ..
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="Leetcode 2. Add Two Numbers">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/" data-tooltip="LeetCode 2. Add Two Numbers">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -542,9 +540,7 @@ cd ..
                   Mar 3, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
-关于 User Pages 和 Project Pages 请参照 Github。
-部署步骤:  首先在 GitHub 上创建&lt;YOUR-PROJECT&gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&lt;USERNAME&gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl + C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public 在 public 下创建子模块并关联到&lt;USERNAME&gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：</div>
+              <div class="media-content hide-xs font-merryweather"><p>介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -554,16 +550,26 @@ cd ..
             
             <div class="media-body">
               <a class="link-unstyled" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
-                <h3 class="media-heading">Leetcode 2. Add Two Numbers</h3>
+                <h3 class="media-heading">LeetCode 2. Add Two Numbers</h3>
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
                   Jun 6, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">Question  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</div>
+              <div class="media-content hide-xs font-merryweather"><h1 id="question">Question</h1>
+
+<blockquote>
+<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+
+<p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
+
+<p>Output: 7 -&gt; 0 -&gt; 8</p>
+</blockquote>
+
+<p></p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>

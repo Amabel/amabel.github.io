@@ -17,9 +17,7 @@
       <pubDate>Wed, 21 Mar 2018 00:15:10 +0900</pubDate>
       
       <guid>https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/</guid>
-      <description>关于 GitHub Pages GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下如何将 Hugo 部署在 User Pages 上。
-关于 User Pages 和 Project Pages 请参照 Github。
-部署步骤:  首先在 GitHub 上创建&amp;lt;YOUR-PROJECT&amp;gt;项目（例：blog），与 Hugo 相关的文件要放在这个项目里 在 GitHub 上创建&amp;lt;USERNAME&amp;gt;.github.io项目，这个项目用来放编译后的静态网页（public下的内容） git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;YOUR-PROJECT&amp;gt; （可选）确保 Hugo 可以在本地运行。hugo server然后在 http://localhost:1313 上查看 （可选）确认后停止 hugo (Ctrl + C)，并清除 hugo 下的 public 文件夹rm -rf public git submodule add -b master git@github.com:&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public 在 public 下创建子模块并关联到&amp;lt;USERNAME&amp;gt;.github.io.git项目中  部署自动化 将以下代码保存到deploy.sh放入 hugo 目录下：</description>
+      <description>&lt;p&gt;介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上&lt;/p&gt;</description>
     </item>
     
   </channel>

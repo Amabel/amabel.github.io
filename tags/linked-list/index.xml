@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leetcode on YuaNdiFuhuO</title>
-    <link>https://amabel.github.io/categories/leetcode/</link>
-    <description>Recent content in Leetcode on YuaNdiFuhuO</description>
+    <title>Linked List on YuaNdiFuhuO</title>
+    <link>https://amabel.github.io/tags/linked-list/</link>
+    <description>Recent content in Linked List on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 18 Jun 2017 22:13:34 +0900</lastBuildDate>
     
-	<atom:link href="https://amabel.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amabel.github.io/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/</guid>
       <description>&lt;p&gt;You are given two &lt;strong&gt;non-empty&lt;/strong&gt; linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Leetcode 3. Longest Substring without Repeating Characters</title>
-      <link>https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/</link>
-      <pubDate>Mon, 12 Jun 2017 18:32:57 +0900</pubDate>
-      
-      <guid>https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/</guid>
-      <description>&lt;p&gt;Given a string, find the &lt;strong&gt;length&lt;/strong&gt; of the &lt;strong&gt;longest substring&lt;/strong&gt; without repeating characters.
 &lt;/p&gt;</description>
     </item>
     

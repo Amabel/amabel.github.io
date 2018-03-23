@@ -19,12 +19,12 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
+    <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
     <title>Hugo: 在 Github 上部署 blog</title>
     <meta name="author" content="Weibin Luo">
     <meta name="keywords" content="hugo, deploy">
 
-    <link rel="icon" href="https://amabel.github.io/favicon.png">
+    <link rel="icon" href="http://res.cloudinary.com/luoweibinb/image/upload/c_thumb,w_20/v1521463221/hugo/20180319200458.jpg">
     
 
     
@@ -246,13 +246,13 @@
 <li>在 GitHub 上创建<code>&lt;USERNAME&gt;.github.io</code>项目，这个项目用来放编译后的静态网页（public下的内容）</li>
 <li><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code></li>
 <li>（可选）确保 Hugo 可以在本地运行。<code>hugo server</code>然后在 <a href="http://localhost:1313">http://localhost:1313</a> 上查看</li>
-<li>（可选）确认后停止 Hugo <code>Ctrl + C</code>，并清除 Hugo 下的 public 文件夹<code>rm -rf public</code></li>
+<li>（可选）停止 Hugo <code>Ctrl + C</code>，并清除 Hugo 下的 public 文件夹<code>rm -rf public</code></li>
 <li><code>git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code> 在 public 下创建子模块并关联到<code>&lt;USERNAME&gt;.github.io.git</code>项目中</li>
 </ol>
 
 <h1 id="自动提交并-push-到-github">自动提交并 push 到 GitHub</h1>
 
-<p>将以下代码保存到<code>deploy.sh</code>放入 hugo 目录下：</p>
+<p>把下面的代码保存到<code>deploy.sh</code>放在 hugo 目录下：</p>
 
 <pre><code>#!/bin/bash
 
@@ -280,7 +280,7 @@ git push origin master
 cd ..
 </code></pre>
 
-<p>用<code>./deploy.sh &quot;Your optional commit message&quot;</code>实现提交和推送 public 下的静态网页</p>
+<p>用<code>./deploy.sh &quot;Your optional commit message&quot;</code>来提交和推送 public 下的静态网页</p>
 
 <h1 id="参考">参考</h1>
 
@@ -557,7 +557,7 @@ cd ..
                   Jun 6, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>用链表接收 2个非负整数求和后把结果用链表返回
+              <div class="media-content hide-xs font-merryweather"><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 </p></div>
             </div>
             <div style="clear:both;"></div>
@@ -575,7 +575,7 @@ cd ..
                   Jun 6, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>最长非重复的子字符串
+              <div class="media-content hide-xs font-merryweather"><p>Given a string, find the <strong>length</strong> of the <strong>longest substring</strong> without repeating characters.
 </p></div>
             </div>
             <div style="clear:both;"></div>
@@ -597,7 +597,7 @@ cd ..
     
   
     
-    <div id="cover" style="background-image:url('https://amabel.github.io/images/cover.jpg');"></div>
+    <div id="cover" style="background-image:url('https://amabel.github.io/images/1.jpg');"></div>
   
 
 

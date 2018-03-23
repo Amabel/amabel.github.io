@@ -19,18 +19,18 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
+    <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
     <title>Leetcode 3. Longest Substring without Repeating Characters</title>
     <meta name="author" content="Weibin Luo">
     <meta name="keywords" content="leetcode">
 
-    <link rel="icon" href="https://amabel.github.io/favicon.png">
+    <link rel="icon" href="http://res.cloudinary.com/luoweibinb/image/upload/c_thumb,w_20/v1521463221/hugo/20180319200458.jpg">
     
 
     
-    <meta name="description" content="最长非重复的子字符串
+    <meta name="description" content="Given a string, find the length of the longest substring without repeating characters.
 ">
-    <meta property="og:description" content="最长非重复的子字符串
+    <meta property="og:description" content="Given a string, find the length of the longest substring without repeating characters.
 ">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Leetcode 3. Longest Substring without Repeating Characters">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="YuaNdiFuhuO">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="YuaNdiFuhuO">
-    <meta name="twitter:description" content="最长非重复的子字符串
+    <meta name="twitter:description" content="Given a string, find the length of the longest substring without repeating characters.
 ">
     
     
@@ -231,13 +231,8 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>最长非重复的子字符串
+              <p>Given a string, find the <strong>length</strong> of the <strong>longest substring</strong> without repeating characters.
 </p>
-
-<h1 id="question">Question</h1>
-
-<blockquote>
-<p>Given a string, find the <strong>length</strong> of the <strong>longest substring</strong> without repeating characters.</p>
 
 <p><strong>Example:</strong></p>
 
@@ -246,9 +241,8 @@
 <p>Given <code>&quot;bbbbb&quot;</code>, the answer is <code>&quot;b&quot;</code>, which the length is 1.</p>
 
 <p>Given <code>&quot;pwwkew&quot;</code>, the answer is <code>&quot;wke&quot;</code>, which the length is 3. Note that the answer must be a <strong>substring</strong>, <code>&quot;pwke&quot;</code> is a <em>subsequence</em> and not a substring.</p>
-</blockquote>
 
-<p><strong>view on <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description">leetcode.com</a></strong></p>
+<p><strong><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description">leetcode.com</a></strong></p>
 
 <hr />
 
@@ -261,10 +255,14 @@
 <h3 id="复杂度">复杂度</h3>
 
 <ul>
-<li><p>时间复杂度：<strong>O(n<sup>3</sup>)</strong> 列出所有的子字符串需要的时间为 O(n<sup>2</sup>)， 判断每个子字符串中是否有重复的字符需要的时间为 O(n)，因此总体时间复杂度为 O(n<sup>3</sup>)。</p></li>
+<li><p>时间复杂度：<strong>O(n<sup>3</sup>)</strong></p></li>
 
-<li><p>空间复杂度：<strong>O(min(n, m))</strong> 判断是否有重复的字符时，需要 O(k) 的空间来存放子字符串。此处 k 为 <code>Set</code> 的大小，取决于字符串的大小 n 或是所有字符 <em>(the size of the charset / alphabet)</em> 的总数 m。（相当于常数复杂度）</p></li>
+<li><p>空间复杂度：<strong>O(min(n, m))</strong></p></li>
 </ul>
+
+<p>列出所有的子字符串需要的时间为 O(n<sup>2</sup>)， 判断每个子字符串中是否有重复的字符需要的时间为 O(n)，因此总体时间复杂度为 O(n<sup>3</sup>)。</p>
+
+<p>判断是否有重复的字符时，需要 O(k) 的空间来存放子字符串。此处 k 为 <code>Set</code> 的大小，取决于字符串的大小 n 或是所有字符 <em>(the size of the charset / alphabet)</em> 的总数 m。（相当于常数复杂度）</p>
 
 <h3 id="代码">代码</h3>
 
@@ -338,17 +336,19 @@ public boolean allUnique(String s, int start, int end) {
 
 <h2 id="解法-2">解法 2</h2>
 
-<p>（使用 2 个指针，最多遍历两次字符串）</p>
+<p>（用 2 个指针，最多遍历两次字符串）</p>
 
-<p>使用 2 个指针 <code>i</code> 和 <code>j</code>，首先把它们都指向字符串的首位，向右移动指针 <code>j</code> 直到 <code>j</code> 指向的字符与 <code>i</code> 指向的字符相同，此时 <code>i</code> 到 <code>j - 1</code> 之间的字符串就是一个不含有重复字符的子字符串，记录它的长度并且更新最大长度，最后把 <code>i</code> 向右移动 1 作为新的起点。</p>
+<p>用 2 个指针 <code>i</code> 和 <code>j</code>，首先把它们都指向字符串的首位，向右移动指针 <code>j</code> 直到 <code>j</code> 指向的字符与 <code>i</code> 指向的字符相同，此时 <code>i</code> 到 <code>j - 1</code> 之间的字符串就是一个不含有重复字符的子字符串，记录它的长度并且更新最大长度，最后把 <code>i</code> 向右移动 1 作为新的起点。</p>
 
 <h3 id="复杂度-1">复杂度</h3>
 
 <ul>
 <li><p>时间复杂度：<strong>O(n)</strong></p></li>
 
-<li><p>空间复杂度：<strong>O(1)</strong> 用长度为 256 的数组来存放字符出现的情况，因此空间复杂度与字符串的长度无关，为常量 O(1)。</p></li>
+<li><p>空间复杂度：<strong>O(1)</strong></p></li>
 </ul>
+
+<p>用长度为 256 的数组来存放字符出现的情况，因此空间复杂度与字符串的长度无关，为常量 O(1)。</p>
 
 <h3 id="代码-1">代码</h3>
 
@@ -427,9 +427,11 @@ public boolean allUnique(String s, int start, int end) {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/leetcode/">Leetcode</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/leetcode/">leetcode</a>
 
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/algorithm/">Algorithm</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/algorithm/">algorithm</a>
+
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/substring/">substring</a>
 
                   </div>
                 
@@ -688,7 +690,7 @@ public boolean allUnique(String s, int start, int end) {
                   Jun 6, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>用链表接收 2个非负整数求和后把结果用链表返回
+              <div class="media-content hide-xs font-merryweather"><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 </p></div>
             </div>
             <div style="clear:both;"></div>
@@ -706,7 +708,7 @@ public boolean allUnique(String s, int start, int end) {
                   Jun 6, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>最长非重复的子字符串
+              <div class="media-content hide-xs font-merryweather"><p>Given a string, find the <strong>length</strong> of the <strong>longest substring</strong> without repeating characters.
 </p></div>
             </div>
             <div style="clear:both;"></div>
@@ -728,7 +730,7 @@ public boolean allUnique(String s, int start, int end) {
     
   
     
-    <div id="cover" style="background-image:url('https://amabel.github.io/images/cover.jpg');"></div>
+    <div id="cover" style="background-image:url('https://amabel.github.io/images/1.jpg');"></div>
   
 
 

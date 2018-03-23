@@ -64,8 +64,20 @@
   </url>
   
   <url>
+    <loc>https://amabel.github.io/tags/linked-list/</loc>
+    <lastmod>2017-06-18T22:13:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amabel.github.io/post/</loc>
     <lastmod>2018-03-21T00:15:10+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amabel.github.io/tags/substring/</loc>
+    <lastmod>2017-06-12T18:32:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   

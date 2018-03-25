@@ -19,7 +19,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
+    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
     <title>LeetCode 2. Add Two Numbers</title>
     <meta name="author" content="Weibin Luo">
     <meta name="keywords" content="leetcode">
@@ -266,18 +266,18 @@
 
 <hr />
 
-<h1 id="复杂度">复杂度</h1>
+<h1 id="complexity">Complexity</h1>
 
 <ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(n)</li>
+<li>时间复杂度：<strong>O(n)</strong></li>
+<li>空间复杂度：<strong>O(n)</strong></li>
 </ul>
 
 <p>时间和空间复杂度都和两个 <code>ListNode</code> 中较长的那个的长度有关</p>
 
 <hr />
 
-<h1 id="代码">代码</h1>
+<h1 id="code">Code</h1>
 
 <p><a href="https://github.com/Amabel/leetcode/blob/master/002.%20Add%20Two%20Numbers/src/solutions/AddTwoNumbers.java">LeetCode 2. Add Two Numbers</a></p>
 
@@ -314,40 +314,41 @@
           <tbody>
             <tr>
               <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br></pre>
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br></pre>
               </td>
               <td class="code">
-                <pre class="code-highlight language-java"><code class="java">public ListNode solution(ListNode l1, ListNode l2) {
-    // result 作为 dummy 头节点，最终返回 result.next
-    ListNode result = new ListNode(0);
-    ListNode p = l1, q = l2;
-    // 当前位的指针
-    ListNode current = result;
-    int carry = 0;
+                <pre class="code-highlight language-java"><code class="java">public class AddTwoNumbers {
+    public ListNode solution(ListNode l1, ListNode l2) {
+        // result 作为 dummy 头节点，最终返回 result.next
+        ListNode result = new ListNode(0);
+        ListNode p = l1, q = l2;
+        // 当前位的指针
+        ListNode current = result;
+        int carry = 0;
 
-    while (null != p || null != q) {
-        // 若指针为 null 则表示当前位为 0
-        // 这是为了应对 2 个链表长度不同，某一个链表先结束的情况
-        int x = (null != p) ? p.val : 0;
-        int y = (null != q) ? q.val : 0;
-        int sum = carry &#43; x &#43; y;
-        carry = sum / 10;
-        current.next = new ListNode(sum % 10);
-        current = current.next;
-        if (null != p) {
-            p = p.next;
+        while (null != p || null != q) {
+            // 若指针为 null 则表示当前位为 0
+            // 这是为了应对 2 个链表长度不同，某一个链表先结束的情况
+            int x = (null != p) ? p.val : 0;
+            int y = (null != q) ? q.val : 0;
+            int sum = carry &#43; x &#43; y;
+            carry = sum / 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+            if (null != p) {
+                p = p.next;
+            }
+            if (null != q) {
+                q = q.next;
+            }
         }
-        if (null != q) {
-            q = q.next;
+        // 别忘记处理最后的 carry
+        if (carry &gt; 0) {
+            current.next = new ListNode(carry);
         }
+        return result.next;
     }
-    // 别忘记处理最后的 carry
-    if (carry &gt; 0) {
-        current.next = new ListNode(carry);
-    }
-    return result.next;
-}
-    </code></pre>
+}</code></pre>
               </td>
             </tr>
           </tbody>
@@ -356,6 +357,8 @@
     
   </div>
 </figure>
+
+<hr />
               
             </div>
           </div>
@@ -392,7 +395,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/" data-tooltip="Leetcode 3. Longest Substring without Repeating Characters">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/" data-tooltip="LeetCode 3. Longest Substring without Repeating Characters">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -478,7 +481,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/" data-tooltip="Leetcode 3. Longest Substring without Repeating Characters">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/" data-tooltip="LeetCode 3. Longest Substring without Repeating Characters">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -605,6 +608,60 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+                <h3 class="media-heading">在 Mac 和 Python3 上安装 MeCab</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>如何在 Mac 和 Python 上安装 MeCab。
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/leetcode-23.-merge-k-sorted-lists/">
+                <h3 class="media-heading">LeetCode 23. Merge k Sorted Lists</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/leetcode-21.-merge-two-sorted-lists/">
+                <h3 class="media-heading">LeetCode 21. Merge Two Sorted Lists</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
                 <h3 class="media-heading">Hugo: 在 Github 上部署 blog</h3>
               </a>
@@ -641,7 +698,7 @@
             
             <div class="media-body">
               <a class="link-unstyled" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/">
-                <h3 class="media-heading">Leetcode 3. Longest Substring without Repeating Characters</h3>
+                <h3 class="media-heading">LeetCode 3. Longest Substring without Repeating Characters</h3>
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
@@ -662,7 +719,7 @@
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         3 posts found
+         6 posts found
       </p>
     </div>
   </div>

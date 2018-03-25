@@ -1,0 +1,779 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>在 Mac 和 Python3 上安装 MeCab</title>
+    <meta name="author" content="Weibin Luo">
+    <meta name="keywords" content="nlp, mecab">
+
+    <link rel="icon" href="http://res.cloudinary.com/luoweibinb/image/upload/c_thumb,w_20/v1521463221/hugo/20180319200458.jpg">
+    
+
+    
+    <meta name="description" content="如何在 Mac 和 Python 上安装 MeCab。
+">
+    <meta property="og:description" content="如何在 Mac 和 Python 上安装 MeCab。
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="在 Mac 和 Python3 上安装 MeCab">
+    <meta property="og:url" content="/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+    <meta property="og:site_name" content="YuaNdiFuhuO">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="YuaNdiFuhuO">
+    <meta name="twitter:description" content="如何在 Mac 和 Python 上安装 MeCab。
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="http://res.cloudinary.com/luoweibinb/image/upload/v1521463221/hugo/20180319200458.jpg">
+    
+
+    
+      <meta property="og:image" content="http://res.cloudinary.com/luoweibinb/image/upload/v1521982846/hugo/python/python-logo.png">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://amabel.github.io/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://amabel.github.io/">YuaNdiFuhuO</a>
+  </div>
+  
+    
+      <a class="header-right-icon open-algolia-search"
+         href="https://amabel.github.io/#search">
+    
+    
+      <i class="fa fa-lg fa-search"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://amabel.github.io/#about">
+          <img class="sidebar-profile-picture" src="http://res.cloudinary.com/luoweibinb/image/upload/v1521463221/hugo/20180319200458.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Weibin Luo</h4>
+        
+          <h5 class="sidebar-profile-bio">资浅程序员</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://amabel.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://amabel.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://amabel.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://amabel.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://amabel.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link open-algolia-search" href="https://amabel.github.io/#search">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+      
+      <span class="sidebar-button-desc">Search</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Amabel" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      在 Mac 和 Python3 上安装 MeCab
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-03-25T21:35:22&#43;09:00">
+        
+  March 25, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://amabel.github.io/categories/nlp">nlp</a>, 
+    
+      <a class="category-link" href="https://amabel.github.io/categories/mecab">mecab</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>如何在 Mac 和 Python 上安装 MeCab。
+</p>
+
+<hr />
+
+<h1 id="mac-安装步骤">Mac 安装步骤</h1>
+
+<p>从 GitHub 上 clone 并 make （注意指定编码为 <code>utf-8</code> 否则可能会有乱码）</p>
+
+<pre><code>git clone https://github.com/Amabel/mecab
+cd mecab/mecab
+./configure  --enable-utf8-only
+make
+make check
+sudo make install
+</code></pre>
+
+<p>安装日语字典 （同样注意编码）</p>
+
+<pre><code>cd ../mecab-ipadic
+./configure --with-charset=utf8
+make
+sudo make install
+</code></pre>
+
+<p>在终端启动 MeCab</p>
+
+<pre><code>$ mecab
+MeCab はフリーソフトウェアです
+MeCab   名詞,固有名詞,組織,*,*,*,*
+は 助詞,係助詞,*,*,*,*,は,ハ,ワ
+フリー   名詞,一般,*,*,*,*,フリー,フリー,フリー
+ソフトウェア  名詞,一般,*,*,*,*,ソフトウェア,ソフトウェア,ソフトウェア
+です  助動詞,*,*,*,特殊・デス,基本形,です,デス,デス
+EOS
+</code></pre>
+
+<hr />
+
+<h1 id="在-python3-上安装">在 Python3 上安装</h1>
+
+<p>通过 pip 安装</p>
+
+<pre><code>pip install mecab-python3
+</code></pre>
+
+<p>使用时引入 MeCab 即可</p>
+
+
+
+  
+  
+  
+  
+  
+
+
+  
+    
+  
+  
+
+<figure class="codeblock codeblock--tabbed">
+  <figcaption>
+    
+      <span>使用 MeCab</span>
+    
+    <ul class="tabs">
+      
+        <li class="tab active">python</li>
+      
+    </ul>
+  </figcaption> 
+  <div class="tabs-content">
+    
+      
+      <figure class="highlight language-python" style="display: block;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="code-highlight language-python"><code class="python">import sys
+import MeCab
+m = MeCab.Tagger (&#34;-Ochasen&#34;)
+print(m.parse (&#34;今日もしないとね&#34;))</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    
+  </div>
+</figure>
+
+<p>解析结果</p>
+
+<pre><code>今日  キョウ   今日  名詞-副詞可能     
+も モ も 助詞-係助詞        
+し シ する  動詞-自立   サ変・スル 未然形
+ない  ナイ  ない  助動詞   特殊・ナイ 基本形
+と ト と 助詞-接続助詞     
+ね ネ ね 助詞-終助詞        
+EOS
+</code></pre>
+
+<hr />
+
+<h1 id="参考">参考</h1>
+
+<p><a href="https://qiita.com/grachro/items/4fbc9bf8174c5abb7bdd">https://qiita.com/grachro/items/4fbc9bf8174c5abb7bdd</a></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/mecab/">mecab</a>
+
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/%E5%BD%A2%E6%85%8B%E7%B4%A0%E8%A7%A3%E6%9E%90/">形態素解析</a>
+
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/nlp/">nlp</a>
+
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/python/">python</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/leetcode-23.-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge k Sorted Lists">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Weibin Luo. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/leetcode-23.-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge k Sorted Lists">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F03%2F%25E5%259C%25A8-mac-%25E5%2592%258C-python3-%25E4%25B8%258A%25E5%25AE%2589%25E8%25A3%2585-mecab%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F03%2F%25E5%259C%25A8-mac-%25E5%2592%258C-python3-%25E4%25B8%258A%25E5%25AE%2589%25E8%25A3%2585-mecab%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F03%2F%25E5%259C%25A8-mac-%25E5%2592%258C-python3-%25E4%25B8%258A%25E5%25AE%2589%25E8%25A3%2585-mecab%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="http://res.cloudinary.com/luoweibinb/image/upload/v1521463221/hugo/20180319200458.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Weibin Luo</h4>
+    
+      <div id="about-card-bio">资浅程序员</div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Tokyo
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab/">
+                <h3 class="media-heading">在 Mac 和 Python3 上安装 MeCab</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>如何在 Mac 和 Python 上安装 MeCab。
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/leetcode-23.-merge-k-sorted-lists/">
+                <h3 class="media-heading">LeetCode 23. Merge k Sorted Lists</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/leetcode-21.-merge-two-sorted-lists/">
+                <h3 class="media-heading">LeetCode 21. Merge Two Sorted Lists</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2018/03/hugo-%E5%9C%A8-github-%E4%B8%8A%E9%83%A8%E7%BD%B2-blog/">
+                <h3 class="media-heading">Hugo: 在 Github 上部署 blog</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>介绍怎么把 Hugo 项目关联到 GitHub 和怎么把 生成的静态网页托管到 github.io 上</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2017/06/leetcode-2.-add-two-numbers/">
+                <h3 class="media-heading">LeetCode 2. Add Two Numbers</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://amabel.github.io/2017/06/leetcode-3.-longest-substring-without-repeating-characters/">
+                <h3 class="media-heading">LeetCode 3. Longest Substring without Repeating Characters</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Given a string, find the <strong>length</strong> of the <strong>longest substring</strong> without repeating characters.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         6 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://amabel.github.io/images/1.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://amabel.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/amabel.github.io\/2018\/03\/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab\/';
+          
+            this.page.identifier = '\/2018\/03\/%E5%9C%A8-mac-%E5%92%8C-python3-%E4%B8%8A%E5%AE%89%E8%A3%85-mecab\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'YuaNdiFuhuO';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

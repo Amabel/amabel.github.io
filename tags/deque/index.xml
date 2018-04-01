@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deque on YuaNdiFuhuO</title>
+    <link>https://amabel.github.io/tags/deque/</link>
+    <description>Recent content in Deque on YuaNdiFuhuO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 01 Apr 2018 11:40:32 +0900</lastBuildDate>
+    
+	<atom:link href="https://amabel.github.io/tags/deque/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java: 使用 Deque 模拟栈和队列</title>
+      <link>https://amabel.github.io/2018/04/java-%E4%BD%BF%E7%94%A8-deque-%E6%A8%A1%E6%8B%9F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/</link>
+      <pubDate>Sun, 01 Apr 2018 11:40:32 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/java-%E4%BD%BF%E7%94%A8-deque-%E6%A8%A1%E6%8B%9F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/</guid>
+      <description>&lt;p&gt;在编程时很多时候需要用到栈和队列，自己编码实现比较麻烦。本文介绍如何用 JDK 自带的类来实现栈和队列。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

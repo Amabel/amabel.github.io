@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>https://amabel.github.io/categories/java/</link>
+      <pubDate>Sun, 01 Apr 2018 11:40:32 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Leetcode</title>
       <link>https://amabel.github.io/categories/leetcode/</link>
       <pubDate>Fri, 23 Mar 2018 22:34:48 +0900</pubDate>
@@ -43,6 +52,15 @@
       <pubDate>Sun, 25 Mar 2018 21:35:22 +0900</pubDate>
       
       <guid>https://amabel.github.io/categories/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pat</title>
+      <link>https://amabel.github.io/categories/pat/</link>
+      <pubDate>Sun, 01 Apr 2018 11:33:43 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/pat/</guid>
       <description></description>
     </item>
     

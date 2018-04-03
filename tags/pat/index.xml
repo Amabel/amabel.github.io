@@ -6,10 +6,149 @@
     <description>Recent content in Pat on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Apr 2018 11:33:43 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Apr 2018 20:37:18 +0900</lastBuildDate>
     
 	<atom:link href="https://amabel.github.io/tags/pat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT 1077. 互评成绩计算 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1077.-%E4%BA%92%E8%AF%84%E6%88%90%E7%BB%A9%E8%AE%A1%E7%AE%97-20/</link>
+      <pubDate>Mon, 02 Apr 2018 20:37:18 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1077.-%E4%BA%92%E8%AF%84%E6%88%90%E7%BB%A9%E8%AE%A1%E7%AE%97-20/</guid>
+      <description>&lt;p&gt;在浙大的计算机专业课中，经常有互评分组报告这个环节。一个组上台介绍自己的工作，其他组在台下为其表现评分。最后这个组的互评成绩是这样计算的：所有其他组的评分中，去掉一个最高分和一个最低分，剩下的分数取平均分记为 G1；老师给这个组的评分记为 G2。该组得分为 (G1 + G2) / 2，最后结果四舍五入后保留整数分。本题就要求你写个程序帮助老师计算每个组的互评成绩。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1076. Wifi 密码 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1076.-wifi-%E5%AF%86%E7%A0%81-15/</link>
+      <pubDate>Mon, 02 Apr 2018 11:14:52 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1076.-wifi-%E5%AF%86%E7%A0%81-15/</guid>
+      <description>&lt;p&gt;下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用wifi，又怕耽误亲们的学习，现将wifi密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。&lt;/p&gt;
+
+&lt;p&gt;(照片自己百度)
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1026. 程序运行时间 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1026.-%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4-15/</link>
+      <pubDate>Mon, 02 Apr 2018 10:53:32 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1026.-%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4-15/</guid>
+      <description>&lt;p&gt;要获得一个 C 语言程序的运行时间，常用的方法是调用头文件&lt;code&gt;time.h&lt;/code&gt;，其中提供了&lt;code&gt;clock()&lt;/code&gt;函数，可以捕捉从程序开始运行到&lt;code&gt;clock()&lt;/code&gt;被调用时所耗费的时间。这个时间单位是 clock tick，即 “时钟打点”。同时还有一个常数&lt;code&gt;CLK_TCK&lt;/code&gt;，给出了机器时钟每秒所走的时钟打点数。于是为了获得一个函数 f 的运行时间，我们只要在调用 f 之前先调用&lt;code&gt;clock()&lt;/code&gt;，获得一个时钟打点数 C1；在 f 执行完成后再调用&lt;code&gt;clock()&lt;/code&gt;，获得另一个时钟打点数 C2；两次获得的时钟打点数之差 (C2 - C1) 就是 f 运行所消耗的时钟打点数，再除以常数&lt;code&gt;CLK_TCK&lt;/code&gt;，就得到了以秒为单位的运行时间。&lt;/p&gt;
+
+&lt;p&gt;这里不妨简单假设常数&lt;code&gt;CLK_TCK&lt;/code&gt;为 100。现给定被测函数前后两次获得的时钟打点数，请你给出被测函数运行的时间。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1016. 部分 A &#43; B (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1016.-%E9%83%A8%E5%88%86-a---b-15/</link>
+      <pubDate>Mon, 02 Apr 2018 10:24:47 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1016.-%E9%83%A8%E5%88%86-a---b-15/</guid>
+      <description>&lt;p&gt;正整数 A 的 “D&lt;sub&gt;A&lt;/sub&gt;（为 1 位整数）部分” 定义为由 A 中所有 D&lt;sub&gt;A&lt;/sub&gt; 组成的新整数 P&lt;sub&gt;A&lt;/sub&gt;。例如：给定 A = 3862767，D &lt;sub&gt;A&lt;/sub&gt; = 6，则 A 的 “6部分” P&lt;sub&gt;A&lt;/sub&gt;是 66，因为 A 中有 2 个 6。&lt;/p&gt;
+
+&lt;p&gt;现给定 A、D&lt;sub&gt;A&lt;/sub&gt;、B、D&lt;sub&gt;B&lt;/sub&gt;，请编写程序计算 P&lt;sub&gt;A&lt;/sub&gt; + P&lt;sub&gt;B&lt;/sub&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1021. 个位数统计 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1021.-%E4%B8%AA%E4%BD%8D%E6%95%B0%E7%BB%9F%E8%AE%A1-15/</link>
+      <pubDate>Mon, 02 Apr 2018 10:05:18 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1021.-%E4%B8%AA%E4%BD%8D%E6%95%B0%E7%BB%9F%E8%AE%A1-15/</guid>
+      <description>&lt;p&gt;给定一个 k 位整数 N = d&lt;sub&gt;k-1&lt;/sub&gt;*10&lt;sup&gt;k-1&lt;/sup&gt; + &amp;hellip; + d&lt;sub&gt;1&lt;/sub&gt;*10&lt;sup&gt;1&lt;/sup&gt; + d&lt;sub&gt;0&lt;/sub&gt; (0 &amp;lt;= d&lt;sub&gt;i&lt;/sub&gt; &amp;lt;= 9, i = 0, &amp;hellip;, k - 1, d&lt;sub&gt;k-1&lt;/sub&gt; &amp;gt; 0)，请编写程序统计每种不同的个位数字出现的次数。例如：给定N = 100311，则有2个0，3个1，和1个3。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1069. 微博转发抽奖 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1069.-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96-20/</link>
+      <pubDate>Mon, 02 Apr 2018 00:18:26 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1069.-%E5%BE%AE%E5%8D%9A%E8%BD%AC%E5%8F%91%E6%8A%BD%E5%A5%96-20/</guid>
+      <description>&lt;p&gt;小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1047. 编程团体赛 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1047.-%E7%BC%96%E7%A8%8B%E5%9B%A2%E4%BD%93%E8%B5%9B-20/</link>
+      <pubDate>Sun, 01 Apr 2018 23:32:34 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1047.-%E7%BC%96%E7%A8%8B%E5%9B%A2%E4%BD%93%E8%B5%9B-20/</guid>
+      <description>&lt;p&gt;编程团体赛的规则为：每个参赛队由若干队员组成；所有队员独立比赛；参赛队的成绩为所有队员的成绩和；成绩最高的队获胜。&lt;/p&gt;
+
+&lt;p&gt;现给定所有队员的比赛成绩，请你编写程序找出冠军队。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1046. 划拳 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1046.-%E5%88%92%E6%8B%B3-15/</link>
+      <pubDate>Sun, 01 Apr 2018 22:29:17 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1046.-%E5%88%92%E6%8B%B3-15/</guid>
+      <description>&lt;p&gt;划拳是古老中国酒文化的一个有趣的组成部分。酒桌上两人划拳的方法为：每人口中喊出一个数字，同时用手比划出一个数字。如果谁比划出的数字正好等于两人喊出的数字之和，谁就赢了，输家罚一杯酒。两人同赢或两人同输则继续下一轮，直到唯一的赢家出现。&lt;/p&gt;
+
+&lt;p&gt;下面给出甲、乙两人的划拳记录，请你统计他们最后分别喝了多少杯酒。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1073. 多选题常见计分法 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1073.-%E5%A4%9A%E9%80%89%E9%A2%98%E5%B8%B8%E8%A7%81%E8%AE%A1%E5%88%86%E6%B3%95-20/</link>
+      <pubDate>Sun, 01 Apr 2018 18:25:50 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1073.-%E5%A4%9A%E9%80%89%E9%A2%98%E5%B8%B8%E8%A7%81%E8%AE%A1%E5%88%86%E6%B3%95-20/</guid>
+      <description>&lt;p&gt;批改多选题是比较麻烦的事情，有很多不同的计分方法。有一种最常见的计分方法是：如果考生选择了部分正确选项，并且没有选择任何错误选项，则得到 50% 分数；如果考生选择了任何一个错误的选项，则不能得分。本题就请你写个程序帮助老师批改多选题，并且指出哪道题的哪个选项错的人最多。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1084. 外观数列 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/</link>
+      <pubDate>Sun, 01 Apr 2018 16:49:05 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/</guid>
+      <description>&lt;p&gt;外观数列是指具有以下特点的整数序列：&lt;/p&gt;
+
+&lt;p&gt;d, d1, d111, d113, d11231, d112213111, &amp;hellip;
+它从不等于 1 的数字 d 开始，序列的第 n+1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 d，所以就是 d1；第 2 项是 1 个 d（对应 d1）和 1 个 1（对应 11），所以第 3 项就是 d111。又比如第 4 项是 d113，其描述就是 1 个 d，2 个 1，1 个 3，所以下一项就是 d11231。当然这个定义对 d = 1 也成立。本题要求你推算任意给定数字 d 的外观数列的第 N 项。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1006. 换个格式输出整数 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1006.-%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0-15/</link>
+      <pubDate>Sun, 01 Apr 2018 14:17:29 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1006.-%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0-15/</guid>
+      <description>&lt;p&gt;让我们用字母 B 来表示 “百”、字母 S 表示 “十”，用 “12&amp;hellip;n” 来表示个位数字 n (&amp;lt; 10)，换个格式来输出任一个不超过 3 位的正整数。例如 234 应该被输出为 BBSSS1234，因为它有 2 个“百”、3 个“十”、以及个位的 4。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1002. 写出这个数 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1002.-%E5%86%99%E5%87%BA%E8%BF%99%E4%B8%AA%E6%95%B0-20/</link>
+      <pubDate>Sun, 01 Apr 2018 13:40:12 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1002.-%E5%86%99%E5%87%BA%E8%BF%99%E4%B8%AA%E6%95%B0-20/</guid>
+      <description>&lt;p&gt;读入一个自然数 n，计算其各位数字之和，用汉语拼音写出和的每一位数字。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PAT 1009. 说反话 (20)</title>

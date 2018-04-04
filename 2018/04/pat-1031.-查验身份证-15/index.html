@@ -20,25 +20,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Java: Scanner 的用法</title>
+    <title>PAT 1031. 查验身份证 (15)</title>
     <meta name="author" content="Weibin Luo">
-    <meta name="keywords" content="java, scanner">
+    <meta name="keywords" content="pat">
 
     <link rel="icon" href="http://res.cloudinary.com/luoweibinb/image/upload/c_thumb,w_20/v1521463221/hugo/20180319200458.jpg">
     
 
     
-    <meta name="description" content="Java 从 1.5 开始添加了 Scanner 类。Scanner 类用于从控制台读取输入，在做 OJ 的题时掌握 Scanner 的用法很重要。
+    <meta name="description" content="一个合法的身份证号码由 17 位地区、日期编号和顺序编号加 1 位校验码组成。校验码的计算规则如下：
+
+首先对前 17 位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对 11 取模得到值 Z；最后按照以下关系对应 Z 值与校验码 M 的值：
 ">
-    <meta property="og:description" content="Java 从 1.5 开始添加了 Scanner 类。Scanner 类用于从控制台读取输入，在做 OJ 的题时掌握 Scanner 的用法很重要。
+    <meta property="og:description" content="一个合法的身份证号码由 17 位地区、日期编号和顺序编号加 1 位校验码组成。校验码的计算规则如下：
+
+首先对前 17 位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对 11 取模得到值 Z；最后按照以下关系对应 Z 值与校验码 M 的值：
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Java: Scanner 的用法">
-    <meta property="og:url" content="/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+    <meta property="og:title" content="PAT 1031. 查验身份证 (15)">
+    <meta property="og:url" content="/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
     <meta property="og:site_name" content="YuaNdiFuhuO">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="YuaNdiFuhuO">
-    <meta name="twitter:description" content="Java 从 1.5 开始添加了 Scanner 类。Scanner 类用于从控制台读取输入，在做 OJ 的题时掌握 Scanner 的用法很重要。
+    <meta name="twitter:description" content="一个合法的身份证号码由 17 位地区、日期编号和顺序编号加 1 位校验码组成。校验码的计算规则如下：
+
+首先对前 17 位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对 11 取模得到值 Z；最后按照以下关系对应 Z 值与校验码 M 的值：
 ">
     
     
@@ -202,15 +208,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Java: Scanner 的用法
+      PAT 1031. 查验身份证 (15)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-03-30T23:10:20&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-04-04T22:08:46&#43;09:00">
         
-  March 30, 2018
+  April 4, 2018
 
       </time>
     
@@ -219,9 +225,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://amabel.github.io/categories/java">java</a>, 
-    
-      <a class="category-link" href="https://amabel.github.io/categories/lib">lib</a>
+      <a class="category-link" href="https://amabel.github.io/categories/pat">pat</a>
     
   
 
@@ -231,65 +235,136 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Java 从 1.5 开始添加了 Scanner 类。Scanner 类用于从控制台读取输入，在做 OJ 的题时掌握 Scanner 的用法很重要。
+              <p>一个合法的身份证号码由 17 位地区、日期编号和顺序编号加 1 位校验码组成。校验码的计算规则如下：</p>
+
+<p>首先对前 17 位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对 11 取模得到值 Z；最后按照以下关系对应 Z 值与校验码 M 的值：
 </p>
 
-<h1 id="基本用法">基本用法</h1>
+<p>Z：0 1 2 3 4 5 6 7 8 9 10</p>
 
-<p>首先引入包</p>
+<p>M：1 0 X 9 8 7 6 5 4 3 2</p>
 
-<pre><code>import java.util.Scanner;
+<p>现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。</p>
+
+<p><strong>输入格式：</strong></p>
+
+<p>输入第一行给出正整数 N (&lt;= 100)是输入的身份证号码的个数。随后 N 行，每行给出 1 个 18 位身份证号码。</p>
+
+<p><strong>输出格式：</strong></p>
+
+<p>按照输入的顺序每行输出 1 个有问题的身份证号码。这里并不检验前 17 位是否合理，只检查前 17 位是否全为数字且最后 1 位校验码计算准确。如果所有号码都正常，则输出“All passed”。</p>
+
+<p><strong>输入样例1：</strong></p>
+
+<pre><code>4
+320124198808240056
+12010X198901011234
+110108196711301866
+37070419881216001X
 </code></pre>
 
-<p>new 出实例，指定从标准输入获取数据</p>
+<p><strong>输出样例1：</strong></p>
 
-<pre><code>Scanner sc = new Scanner(System.in);
+<pre><code>12010X198901011234
+110108196711301866
+37070419881216001X
 </code></pre>
 
-<p>常用的方法：</p>
+<p><strong>输入样例2：</strong></p>
 
-<pre><code>sc.nextInt() // 读取下一个整数（返回 int）
-sc.nextLine() // 读取下一行的内容（返回 String）
-sc.next() // 读取下一个有效的 token （读取到空格为止，返回字符串）
-sc.hasNext() // 检查是否存在下一个有效 token
-// ...
+<pre><code>2
+320124198808240056
+110108196711301862
 </code></pre>
 
-<p>在上面的方法中传入正则表达式<code>Pattern</code>可以直接按正则表达式进行匹配。</p>
+<p><strong>输出样例2：</strong></p>
+
+<pre><code>All passed
+</code></pre>
 
 <hr />
 
-<h1 id="是否关闭-system-in">是否关闭 System.in ?</h1>
+<h1 id="分析">分析</h1>
 
-<p>resource 使用完毕后应当随手关闭，否则会占用资源。但是此处若使用<code>sc.close()</code>会导致将<code>System.in</code>一起关闭。因此使用<code>System.in</code>的时候可以考虑不关闭资源，此时应在变量前加上注释来抑制编译器的警告：</p>
+<p>记得乘以权重之后再相加。遍历前17位时若有一位是非数字就可以退出遍历检查下一行。</p>
 
-<pre><code>@SuppressWarnings(&quot;resource&quot;)
-Scanner sc = new Scanner(System.in);
-</code></pre>
+<h1 id="代码">代码</h1>
 
-<p>如果想在关闭 <code>Scanner</code>的同时不想关闭 <code>System.in</code>，可以使用 Apache 的 <a href="http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/input/CloseShieldInputStream.html">CloseShieldInputStream</a></p>
 
-<hr />
 
-<h1 id="the-try-with-resources-statement">The try-with-resources Statement</h1>
+  
+  
+  
+  
+  
 
-<p>java 1.7 开始提供 try-with-resources Statement。格式如下：</p>
 
-<pre><code>try (Scanner sc = new Scanner(System.in)) {
-    // 代码
-}
-</code></pre>
+  
+    
+  
+  
 
-<p>上面代码可以保证在<code>try</code>执行完毕后会关闭其中的所有资源，等价于：</p>
-
-<pre><code>try (Scanner sc = new Scanner(System.in)) {
-    // 代码
-} finally {
-    sc.close();
-}
-</code></pre>
-
-<p>参考：<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html#suppressed-exceptions">The try-with-resources Statement</a></p>
+<figure class="codeblock codeblock--tabbed">
+  <figcaption>
+    
+      <span>pat 1031. 查验身份证</span>
+    
+    <ul class="tabs">
+      
+        <li class="tab active">java</li>
+      
+    </ul>
+  </figcaption> 
+  <div class="tabs-content">
+    
+      
+      <figure class="highlight language-java" style="display: block;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="code-highlight language-java"><code class="java">import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        char[] checkArr = {&#39;1&#39;, &#39;0&#39;, &#39;X&#39;, &#39;9&#39;, &#39;8&#39;, &#39;7&#39;, &#39;6&#39;, &#39;5&#39;, &#39;4&#39;, &#39;3&#39;, &#39;2&#39;};
+        int[] w = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+        int n = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i &lt; n; i&#43;&#43;) {
+            boolean checked = true;
+            String s = sc.nextLine();
+            int sum = 0;
+            for (int j = 0; j &lt; s.length() - 1; j&#43;&#43;) {
+                if (s.charAt(j) &lt; &#39;0&#39; || s.charAt(j) &gt; &#39;9&#39;) {
+                    checked = false;
+                    break;
+                }
+                sum &#43;= (s.charAt(j) - &#39;0&#39;) * w[j];
+            }
+            if (!checked || s.charAt(s.length() - 1) != checkArr[sum % 11]) {
+                System.out.println(s);
+            } else {
+                count &#43;&#43;;
+            }
+        }
+        if (count == n) {
+            System.out.println(&#34;All passed&#34;);
+        }
+    }
+}</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    
+  </div>
+</figure>
               
             </div>
           </div>
@@ -301,11 +376,9 @@ Scanner sc = new Scanner(System.in);
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/java/">java</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/algorithm/">algorithm</a>
 
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/inputs/">inputs</a>
-
-  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/java-library/">java library</a>
+  <a class="tag tag--primary tag--small" href="https://amabel.github.io/tags/pat/">pat</a>
 
                   </div>
                 
@@ -318,7 +391,7 @@ Scanner sc = new Scanner(System.in);
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/pat-1013.-%E6%95%B0%E7%B4%A0%E6%95%B0-20/" data-tooltip="PAT 1013. 数素数 (20)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -326,7 +399,7 @@ Scanner sc = new Scanner(System.in);
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/pat-1004.-%E6%88%90%E7%BB%A9%E6%8E%92%E5%90%8D-20/" data-tooltip="PAT 1004. 成绩排名 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1036.-%E8%B7%9F%E5%A5%A5%E5%B7%B4%E9%A9%AC%E4%B8%80%E8%B5%B7%E7%BC%96%E7%A8%8B-15/" data-tooltip="PAT 1036. 跟奥巴马一起编程 (15)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -344,19 +417,19 @@ Scanner sc = new Scanner(System.in);
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -404,7 +477,7 @@ Scanner sc = new Scanner(System.in);
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/pat-1013.-%E6%95%B0%E7%B4%A0%E6%95%B0-20/" data-tooltip="PAT 1013. 数素数 (20)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -412,7 +485,7 @@ Scanner sc = new Scanner(System.in);
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/03/pat-1004.-%E6%88%90%E7%BB%A9%E6%8E%92%E5%90%8D-20/" data-tooltip="PAT 1004. 成绩排名 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1036.-%E8%B7%9F%E5%A5%A5%E5%B7%B4%E9%A9%AC%E4%B8%80%E8%B5%B7%E7%BC%96%E7%A8%8B-15/" data-tooltip="PAT 1036. 跟奥巴马一起编程 (15)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -430,19 +503,19 @@ Scanner sc = new Scanner(System.in);
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/03/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -472,19 +545,19 @@ Scanner sc = new Scanner(System.in);
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fjava-scanner-%25E7%259A%2584%25E7%2594%25A8%25E6%25B3%2595%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1031.-%25E6%259F%25A5%25E9%25AA%258C%25E8%25BA%25AB%25E4%25BB%25BD%25E8%25AF%2581-15%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fjava-scanner-%25E7%259A%2584%25E7%2594%25A8%25E6%25B3%2595%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1031.-%25E6%259F%25A5%25E9%25AA%258C%25E8%25BA%25AB%25E4%25BB%25BD%25E8%25AF%2581-15%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F03%2Fjava-scanner-%25E7%259A%2584%25E7%2594%25A8%25E6%25B3%2595%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1031.-%25E6%259F%25A5%25E9%25AA%258C%25E8%25BA%25AB%25E4%25BB%25BD%25E8%25AF%2581-15%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -780,9 +853,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/amabel.github.io\/2018\/03\/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95\/';
+          this.page.url = 'https:\/\/amabel.github.io\/2018\/04\/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15\/';
           
-            this.page.identifier = '\/2018\/03\/java-scanner-%E7%9A%84%E7%94%A8%E6%B3%95\/'
+            this.page.identifier = '\/2018\/04\/pat-1031.-%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81-15\/'
           
         };
         (function() {

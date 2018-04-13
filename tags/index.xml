@@ -6,7 +6,7 @@
     <description>Recent content in Tags on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Apr 2018 22:08:46 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Apr 2018 13:05:56 +0900</lastBuildDate>
     
 	<atom:link href="https://amabel.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Algorithm</title>
       <link>https://amabel.github.io/tags/algorithm/</link>
-      <pubDate>Wed, 04 Apr 2018 22:08:46 +0900</pubDate>
+      <pubDate>Sat, 07 Apr 2018 13:05:56 +0900</pubDate>
       
       <guid>https://amabel.github.io/tags/algorithm/</guid>
       <description></description>
@@ -44,6 +44,15 @@
       <pubDate>Sun, 01 Apr 2018 11:40:32 +0900</pubDate>
       
       <guid>https://amabel.github.io/tags/deque/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developer</title>
+      <link>https://amabel.github.io/tags/developer/</link>
+      <pubDate>Mon, 09 Apr 2018 23:24:01 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/tags/developer/</guid>
       <description></description>
     </item>
     
@@ -122,7 +131,7 @@
     <item>
       <title>Pat</title>
       <link>https://amabel.github.io/tags/pat/</link>
-      <pubDate>Wed, 04 Apr 2018 22:08:46 +0900</pubDate>
+      <pubDate>Sat, 07 Apr 2018 13:05:56 +0900</pubDate>
       
       <guid>https://amabel.github.io/tags/pat/</guid>
       <description></description>
@@ -170,6 +179,15 @@
       <pubDate>Mon, 12 Jun 2017 18:32:57 +0900</pubDate>
       
       <guid>https://amabel.github.io/tags/substring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://amabel.github.io/tags/tips/</link>
+      <pubDate>Mon, 09 Apr 2018 23:24:01 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/tags/tips/</guid>
       <description></description>
     </item>
     

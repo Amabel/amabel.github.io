@@ -6,10 +6,39 @@
     <description>Recent content in Pat on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Apr 2018 22:08:46 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Apr 2018 13:05:56 +0900</lastBuildDate>
     
 	<atom:link href="https://amabel.github.io/categories/pat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT 1037. 在霍格沃茨找零钱 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1037.-%E5%9C%A8%E9%9C%8D%E6%A0%BC%E6%B2%83%E8%8C%A8%E6%89%BE%E9%9B%B6%E9%92%B1-20/</link>
+      <pubDate>Sat, 07 Apr 2018 13:05:56 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1037.-%E5%9C%A8%E9%9C%8D%E6%A0%BC%E6%B2%83%E8%8C%A8%E6%89%BE%E9%9B%B6%E9%92%B1-20/</guid>
+      <description>&lt;p&gt;如果你是哈利·波特迷，你会知道魔法世界有它自己的货币系统 —— 就如海格告诉哈利的：“十七个银西可 (Sickle) 兑一个加隆 (Galleon)，二十九个纳特 (Knut) 兑一个西可，很容易。”现在，给定哈利应付的价钱 P 和他实付的钱 A，你的任务是写一个程序来计算他应该被找的零钱。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1081. 检查密码 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1081.-%E6%A3%80%E6%9F%A5%E5%AF%86%E7%A0%81-15/</link>
+      <pubDate>Thu, 05 Apr 2018 15:56:44 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1081.-%E6%A3%80%E6%9F%A5%E5%AF%86%E7%A0%81-15/</guid>
+      <description>&lt;p&gt;本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于 6 个字符组成，并且只能有英文字母、数字和小数点&lt;code&gt;.&lt;/code&gt;，还必须既有字母也有数字。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1041. 考试座位号 (15)</title>
+      <link>https://amabel.github.io/2018/04/pat-1041.-%E8%80%83%E8%AF%95%E5%BA%A7%E4%BD%8D%E5%8F%B7-15/</link>
+      <pubDate>Thu, 05 Apr 2018 11:20:48 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1041.-%E8%80%83%E8%AF%95%E5%BA%A7%E4%BD%8D%E5%8F%B7-15/</guid>
+      <description>&lt;p&gt;每个 PAT 考生在参加考试时都会被分配两个座位号，一个是试机座位，一个是考试座位。正常情况下，考生在入场时先得到试机座位号码，入座进入试机状态后，系统会显示该考生的考试座位号码，考试时考生需要换到考试座位就座。但有些考生迟到了，试机已经结束，他们只能拿着领到的试机座位号码求助于你，从后台查出他们的考试座位号码。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PAT 1031. 查验身份证 (15)</title>

@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Jbuilder</title>
+      <link>https://amabel.github.io/categories/jbuilder/</link>
+      <pubDate>Fri, 13 Apr 2018 14:18:45 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/jbuilder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Leetcode</title>
       <link>https://amabel.github.io/categories/leetcode/</link>
       <pubDate>Fri, 23 Mar 2018 22:34:48 +0900</pubDate>
@@ -79,6 +88,24 @@
       <pubDate>Sat, 07 Apr 2018 13:05:56 +0900</pubDate>
       
       <guid>https://amabel.github.io/categories/pat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>https://amabel.github.io/categories/rails/</link>
+      <pubDate>Fri, 13 Apr 2018 21:57:16 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rspec</title>
+      <link>https://amabel.github.io/categories/rspec/</link>
+      <pubDate>Fri, 13 Apr 2018 21:57:16 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/categories/rspec/</guid>
       <description></description>
     </item>
     

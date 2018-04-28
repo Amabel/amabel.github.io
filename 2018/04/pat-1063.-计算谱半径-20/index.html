@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.37 with theme Tranquilpeak 0.4.3-BETA">
-    <title>PAT 1084. 外观数列 (20)</title>
+    <title>PAT 1063. 计算谱半径 (20)</title>
     <meta name="author" content="Weibin Luo">
     <meta name="keywords" content="pat">
 
@@ -28,26 +28,26 @@
     
 
     
-    <meta name="description" content="外观数列是指具有以下特点的整数序列：
+    <meta name="description" content="在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 n 个复数空间的特征值 { a1 &#43; b1i, &hellip;, an&#43;bni }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。
 
-d, d1, d111, d113, d11231, d112213111, &hellip;
-它从不等于 1 的数字 d 开始，序列的第 n&#43;1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 d，所以就是 d1；第 2 项是 1 个 d（对应 d1）和 1 个 1（对应 11），所以第 3 项就是 d111。又比如第 4 项是 d113，其描述就是 1 个 d，2 个 1，1 个 3，所以下一项就是 d11231。当然这个定义对 d = 1 也成立。本题要求你推算任意给定数字 d 的外观数列的第 N 项。
+现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。
+
 ">
-    <meta property="og:description" content="外观数列是指具有以下特点的整数序列：
+    <meta property="og:description" content="在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 n 个复数空间的特征值 { a1 &#43; b1i, &hellip;, an&#43;bni }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。
 
-d, d1, d111, d113, d11231, d112213111, &hellip;
-它从不等于 1 的数字 d 开始，序列的第 n&#43;1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 d，所以就是 d1；第 2 项是 1 个 d（对应 d1）和 1 个 1（对应 11），所以第 3 项就是 d111。又比如第 4 项是 d113，其描述就是 1 个 d，2 个 1，1 个 3，所以下一项就是 d11231。当然这个定义对 d = 1 也成立。本题要求你推算任意给定数字 d 的外观数列的第 N 项。
+现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。
+
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="PAT 1084. 外观数列 (20)">
-    <meta property="og:url" content="/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+    <meta property="og:title" content="PAT 1063. 计算谱半径 (20)">
+    <meta property="og:url" content="/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
     <meta property="og:site_name" content="YuaNdiFuhuO">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="YuaNdiFuhuO">
-    <meta name="twitter:description" content="外观数列是指具有以下特点的整数序列：
+    <meta name="twitter:description" content="在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 n 个复数空间的特征值 { a1 &#43; b1i, &hellip;, an&#43;bni }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。
 
-d, d1, d111, d113, d11231, d112213111, &hellip;
-它从不等于 1 的数字 d 开始，序列的第 n&#43;1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 d，所以就是 d1；第 2 项是 1 个 d（对应 d1）和 1 个 1（对应 11），所以第 3 项就是 d111。又比如第 4 项是 d113，其描述就是 1 个 d，2 个 1，1 个 3，所以下一项就是 d11231。当然这个定义对 d = 1 也成立。本题要求你推算任意给定数字 d 的外观数列的第 N 项。
+现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。
+
 ">
     
     
@@ -211,15 +211,15 @@ d, d1, d111, d113, d11231, d112213111, &hellip;
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      PAT 1084. 外观数列 (20)
+      PAT 1063. 计算谱半径 (20)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-04-01T16:49:05&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-04-26T15:50:08&#43;09:00">
         
-  April 1, 2018
+  April 26, 2018
 
       </time>
     
@@ -238,43 +238,36 @@ d, d1, d111, d113, d11231, d112213111, &hellip;
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>外观数列是指具有以下特点的整数序列：</p>
+              <p>在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 n 个复数空间的特征值 { a<sub>1</sub> + b<sub>1</sub>i, &hellip;, a<sub>n</sub>+b<sub>n</sub>i }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。</p>
 
-<p>d, d1, d111, d113, d11231, d112213111, &hellip;
-它从不等于 1 的数字 d 开始，序列的第 n+1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 d，所以就是 d1；第 2 项是 1 个 d（对应 d1）和 1 个 1（对应 11），所以第 3 项就是 d111。又比如第 4 项是 d113，其描述就是 1 个 d，2 个 1，1 个 3，所以下一项就是 d11231。当然这个定义对 d = 1 也成立。本题要求你推算任意给定数字 d 的外观数列的第 N 项。
-</p>
+<p>现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。</p>
+
+<p></p>
 
 <p><strong>输入格式：</strong></p>
 
-<p>输入第一行给出 [0,9] 范围内的一个整数 d、以及一个正整数 N (&lt;= 40)，用空格分隔。</p>
+<p>输入第一行给出正整数 N（&lt;= 10000）是输入的特征值的个数。随后 N 行，每行给出 1 个特征值的实部和虚部，其间以空格分隔。注意：题目保证实部和虚部均为绝对值不超过 1000  的整数。</p>
 
 <p><strong>输出格式：</strong></p>
 
-<p>在一行中给出数字 d 的外观数列的第 N 项。</p>
+<p>在一行中输出谱半径，四舍五入保留小数点后 2 位。</p>
 
 <p><strong>输入样例：</strong></p>
 
-<pre><code>1 8
+<pre><code>5
+0 1
+2 0
+-1 0
+3 3
+0 -3
 </code></pre>
 
 <p><strong>输出样例：</strong></p>
 
-<pre><code>1123123111
+<pre><code>4.24
 </code></pre>
 
 <hr />
-
-<h1 id="分析">分析</h1>
-
-<p>字符串指针操作头疼。总共进行 n 次迭代，每次遍历字符串<code>d</code>统计连续出现的数字和个数并构建新的字符串。</p>
-
-<p>第一位数 d 不需要分开考虑，当 d = 1 时与后面的 1 一起计数。</p>
-
-<p>本题用了<code>StringBuilder</code>来节省内存。频繁修改 <code>String</code> 时容易造成浪费空间。</p>
-
-<div class="alert warning ">
-  <p>题目没有给出 n = 0 时应该输出的结果。</p>
-</div>
 
 <h1 id="代码">代码</h1>
 
@@ -295,7 +288,7 @@ d, d1, d111, d113, d11231, d112213111, &hellip;
 <figure class="codeblock codeblock--tabbed">
   <figcaption>
     
-      <span>pat 1084. 外观数列</span>
+      <span>pat 1063. 计算谱半径</span>
     
     <ul class="tabs">
       
@@ -311,30 +304,23 @@ d, d1, d111, d113, d11231, d112213111, &hellip;
           <tbody>
             <tr>
               <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></pre>
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></pre>
               </td>
               <td class="code">
                 <pre class="code-highlight language-java"><code class="java">import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String d = sc.next();
-        int n = sc.nextInt();
-        for (int i = 1; i &lt; n; i&#43;&#43;) {
-            // StringBuilder 节省内存
-            StringBuilder sb = new StringBuilder();
-            for (int j = 0; j &lt; d.length(); j&#43;&#43;) {
-                int count = 1;
-                char c = d.charAt(j);
-                while (j &#43; 1 &lt; d.length() &amp;&amp; d.charAt(j &#43; 1) == c) {
-                    count &#43;&#43;;
-                    j &#43;&#43;;
-                }
-                sb.append(c &#43; &#34;&#34; &#43; count);						
-            }
-            d = sb.toString();
-        }
-        System.out.println(d);
+       try (Scanner sc = new Scanner(System.in);) {
+           double res = 0;
+           int n = sc.nextInt();
+           for (int i = 0; i &lt; n; i&#43;&#43;) {
+               int x = sc.nextInt();
+               int y = sc.nextInt();
+               int abs = x * x &#43; y * y;
+               res = Math.max(res, abs);
+           }
+           System.out.printf(&#34;%.2f\n&#34;, Math.sqrt(res));
+       }
     }
 }</code></pre>
               </td>
@@ -371,7 +357,7 @@ public class Main {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1073.-%E5%A4%9A%E9%80%89%E9%A2%98%E5%B8%B8%E8%A7%81%E8%AE%A1%E5%88%86%E6%B3%95-20/" data-tooltip="PAT 1073. 多选题常见计分法 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1049.-%E6%95%B0%E5%88%97%E7%9A%84%E7%89%87%E6%AE%B5%E5%92%8C-20/" data-tooltip="PAT 1049. 数列的片段和 (20)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -379,7 +365,7 @@ public class Main {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1082.-%E5%B0%84%E5%87%BB%E6%AF%94%E8%B5%9B-20/" data-tooltip="PAT 1082. 射击比赛 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/rspec_basic/" data-tooltip="RSpec_basic">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -397,19 +383,19 @@ public class Main {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -457,7 +443,7 @@ public class Main {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1073.-%E5%A4%9A%E9%80%89%E9%A2%98%E5%B8%B8%E8%A7%81%E8%AE%A1%E5%88%86%E6%B3%95-20/" data-tooltip="PAT 1073. 多选题常见计分法 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1049.-%E6%95%B0%E5%88%97%E7%9A%84%E7%89%87%E6%AE%B5%E5%92%8C-20/" data-tooltip="PAT 1049. 数列的片段和 (20)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -465,7 +451,7 @@ public class Main {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/pat-1082.-%E5%B0%84%E5%87%BB%E6%AF%94%E8%B5%9B-20/" data-tooltip="PAT 1082. 射击比赛 (20)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://amabel.github.io/2018/04/rspec_basic/" data-tooltip="RSpec_basic">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -483,19 +469,19 @@ public class Main {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -525,19 +511,19 @@ public class Main {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1084.-%25E5%25A4%2596%25E8%25A7%2582%25E6%2595%25B0%25E5%2588%2597-20%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1063.-%25E8%25AE%25A1%25E7%25AE%2597%25E8%25B0%25B1%25E5%258D%258A%25E5%25BE%2584-20%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1084.-%25E5%25A4%2596%25E8%25A7%2582%25E6%2595%25B0%25E5%2588%2597-20%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1063.-%25E8%25AE%25A1%25E7%25AE%2597%25E8%25B0%25B1%25E5%258D%258A%25E5%25BE%2584-20%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1084.-%25E5%25A4%2596%25E8%25A7%2582%25E6%2595%25B0%25E5%2588%2597-20%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Famabel.github.io%2F2018%2F04%2Fpat-1063.-%25E8%25AE%25A1%25E7%25AE%2597%25E8%25B0%25B1%25E5%258D%258A%25E5%25BE%2584-20%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -824,9 +810,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/amabel.github.io\/2018\/04\/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20\/';
+          this.page.url = 'https:\/\/amabel.github.io\/2018\/04\/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20\/';
           
-            this.page.identifier = '\/2018\/04\/pat-1084.-%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97-20\/'
+            this.page.identifier = '\/2018\/04\/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20\/'
           
         };
         (function() {

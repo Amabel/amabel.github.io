@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://amabel.github.io/2018/04/pat-1049.-%E6%95%B0%E5%88%97%E7%9A%84%E7%89%87%E6%AE%B5%E5%92%8C-20/</loc>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/</loc>
+    <lastmod>2018-04-26T15:50:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://amabel.github.io/2018/04/rspec_basic/</loc>
     <lastmod>2018-04-13T21:57:16+09:00</lastmod>
   </url>
@@ -199,7 +209,7 @@
   
   <url>
     <loc>https://amabel.github.io/tags/algorithm/</loc>
-    <lastmod>2018-04-07T13:05:56+09:00</lastmod>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,25 +242,25 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/developer/</loc>
-    <lastmod>2018-04-09T23:24:01+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://amabel.github.io/categories/developer/</loc>
     <lastmod>2018-04-09T23:24:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/hugo/</loc>
-    <lastmod>2018-03-21T00:15:10+09:00</lastmod>
+    <loc>https://amabel.github.io/tags/developer/</loc>
+    <lastmod>2018-04-09T23:24:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amabel.github.io/categories/hugo/</loc>
+    <lastmod>2018-03-21T00:15:10+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amabel.github.io/tags/hugo/</loc>
     <lastmod>2018-03-21T00:15:10+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -262,13 +272,13 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/java/</loc>
+    <loc>https://amabel.github.io/categories/java/</loc>
     <lastmod>2018-04-01T11:40:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/categories/java/</loc>
+    <loc>https://amabel.github.io/tags/java/</loc>
     <lastmod>2018-04-01T11:40:32+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -280,13 +290,13 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/jbuilder/</loc>
+    <loc>https://amabel.github.io/categories/jbuilder/</loc>
     <lastmod>2018-04-13T14:18:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/categories/jbuilder/</loc>
+    <loc>https://amabel.github.io/tags/jbuilder/</loc>
     <lastmod>2018-04-13T14:18:45+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -298,13 +308,13 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/leetcode/</loc>
+    <loc>https://amabel.github.io/categories/leetcode/</loc>
     <lastmod>2018-03-23T22:34:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/categories/leetcode/</loc>
+    <loc>https://amabel.github.io/tags/leetcode/</loc>
     <lastmod>2018-03-23T22:34:48+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -322,19 +332,13 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/mecab/</loc>
-    <lastmod>2018-03-25T21:35:22+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://amabel.github.io/categories/mecab/</loc>
     <lastmod>2018-03-25T21:35:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/nlp/</loc>
+    <loc>https://amabel.github.io/tags/mecab/</loc>
     <lastmod>2018-03-25T21:35:22+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -346,20 +350,26 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/pat/</loc>
-    <lastmod>2018-04-07T13:05:56+09:00</lastmod>
+    <loc>https://amabel.github.io/tags/nlp/</loc>
+    <lastmod>2018-03-25T21:35:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amabel.github.io/categories/pat/</loc>
-    <lastmod>2018-04-07T13:05:56+09:00</lastmod>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amabel.github.io/tags/pat/</loc>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amabel.github.io/post/</loc>
-    <lastmod>2018-04-13T21:57:16+09:00</lastmod>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -376,25 +386,25 @@
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/rails/</loc>
-    <lastmod>2018-04-13T21:57:16+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://amabel.github.io/categories/rails/</loc>
     <lastmod>2018-04-13T21:57:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amabel.github.io/tags/rspec/</loc>
+    <loc>https://amabel.github.io/tags/rails/</loc>
     <lastmod>2018-04-13T21:57:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amabel.github.io/categories/rspec/</loc>
+    <lastmod>2018-04-13T21:57:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amabel.github.io/tags/rspec/</loc>
     <lastmod>2018-04-13T21:57:16+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -419,7 +429,7 @@
   
   <url>
     <loc>https://amabel.github.io/tags/</loc>
-    <lastmod>2018-04-07T13:05:56+09:00</lastmod>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -437,7 +447,7 @@
   
   <url>
     <loc>https://amabel.github.io/</loc>
-    <lastmod>2018-04-13T21:57:16+09:00</lastmod>
+    <lastmod>2018-04-26T16:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   

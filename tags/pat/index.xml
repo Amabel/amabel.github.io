@@ -6,10 +6,36 @@
     <description>Recent content in Pat on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Apr 2018 13:05:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Apr 2018 16:14:58 +0900</lastBuildDate>
     
 	<atom:link href="https://amabel.github.io/tags/pat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT 1049. 数列的片段和 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1049.-%E6%95%B0%E5%88%97%E7%9A%84%E7%89%87%E6%AE%B5%E5%92%8C-20/</link>
+      <pubDate>Thu, 26 Apr 2018 16:14:58 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1049.-%E6%95%B0%E5%88%97%E7%9A%84%E7%89%87%E6%AE%B5%E5%92%8C-20/</guid>
+      <description>&lt;p&gt;给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。&lt;/p&gt;
+
+&lt;p&gt;给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1063. 计算谱半径 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/</link>
+      <pubDate>Thu, 26 Apr 2018 15:50:08 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1063.-%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%8D%8A%E5%BE%84-20/</guid>
+      <description>&lt;p&gt;在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 n 个复数空间的特征值 { a&lt;sub&gt;1&lt;/sub&gt; + b&lt;sub&gt;1&lt;/sub&gt;i, &amp;hellip;, a&lt;sub&gt;n&lt;/sub&gt;+b&lt;sub&gt;n&lt;/sub&gt;i }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。&lt;/p&gt;
+
+&lt;p&gt;现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PAT 1037. 在霍格沃茨找零钱 (20)</title>

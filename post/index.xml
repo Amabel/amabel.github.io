@@ -6,10 +6,72 @@
     <description>Recent content in Posts on YuaNdiFuhuO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Apr 2018 16:14:58 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Apr 2018 20:43:26 +0900</lastBuildDate>
     
 	<atom:link href="https://amabel.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PAT 1029. 旧键盘 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1029.-%E6%97%A7%E9%94%AE%E7%9B%98-20/</link>
+      <pubDate>Sun, 29 Apr 2018 20:43:26 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1029.-%E6%97%A7%E9%94%AE%E7%9B%98-20/</guid>
+      <description>&lt;p&gt;旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1032. 挖掘技术哪家强 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1032.-%E6%8C%96%E6%8E%98%E6%8A%80%E6%9C%AF%E5%93%AA%E5%AE%B6%E5%BC%BA-20/</link>
+      <pubDate>Sun, 29 Apr 2018 20:23:25 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1032.-%E6%8C%96%E6%8E%98%E6%8A%80%E6%9C%AF%E5%93%AA%E5%AE%B6%E5%BC%BA-20/</guid>
+      <description>&lt;p&gt;为了用事实说明挖掘机技术到底哪家强，PAT组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。
+
+&lt;strong&gt;输入格式：&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1072. 开学寄语 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1072.-%E5%BC%80%E5%AD%A6%E5%AF%84%E8%AF%AD-20/</link>
+      <pubDate>Sun, 29 Apr 2018 18:24:19 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1072.-%E5%BC%80%E5%AD%A6%E5%AF%84%E8%AF%AD-20/</guid>
+      <description>&lt;p&gt;下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！&lt;/p&gt;
+
+&lt;p&gt;(图自己找)&lt;/p&gt;
+
+&lt;p&gt;本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1057. 数零壹 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1057.-%E6%95%B0%E9%9B%B6%E5%A3%B9-20/</link>
+      <pubDate>Sun, 29 Apr 2018 17:14:51 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1057.-%E6%95%B0%E9%9B%B6%E5%A3%B9-20/</guid>
+      <description>&lt;p&gt;给定一串长度不超过 10&lt;sup&gt;5&lt;/sup&gt;的字符串，本题要求你将其中所有英文字母的序号（字母 a - z 对应序号 1 - 26，不分大小写）相加，得到整数 N，然后再分析一下 N 的二进制表示中有多少 0、多少 1。例如给定字符串 “PAT (Basic)”，其字母序号之和为：16 + 1 + 20 + 2 + 1 + 19 + 9 + 3 = 71，而 71 的二进制是 1000111，即有 3 个 0、4 个 1。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PAT 1052. 卖个萌 (20)</title>
+      <link>https://amabel.github.io/2018/04/pat-1052.-%E5%8D%96%E4%B8%AA%E8%90%8C-20/</link>
+      <pubDate>Sun, 29 Apr 2018 16:45:35 +0900</pubDate>
+      
+      <guid>https://amabel.github.io/2018/04/pat-1052.-%E5%8D%96%E4%B8%AA%E8%90%8C-20/</guid>
+      <description>&lt;p&gt;萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：&lt;/p&gt;
+
+&lt;p&gt;[左手]([左眼][口][右眼])[右手]&lt;/p&gt;
+
+&lt;p&gt;现给出可选用的符号集合，请你按用户的要求输出表情。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PAT 1049. 数列的片段和 (20)</title>

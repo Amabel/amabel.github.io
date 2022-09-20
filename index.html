@@ -1,14 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Amabel</title>
-  <base href="/">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH5gkUBTMy5NUG3QAACZRJREFUWMOFl12sXNV5hp/vW2vvPXPmjI3xD9gYJzGxoQiTptSOoMQxspSSqCqNetE4qhTamxJVVapK0MteVIpU0UqtqopcpApKkQrNVapIJUqsWFGISlwC2EBsDMHB2MfB8fmfM/tnre/rxR5DkkK6pD17z+zRWt/P+77rXcL/My4sZUQkZsv7cD9KsiPWpQNuvtPcRtkMM5mcf/OnC5ffXjh96NDdJ9rUHS/L4pyZpQMf2vJr54/vv7ABBPC7zPxPwO+HvNuwaDgmYO5kNwwfd9aNU877u9w9oCpvqerT7vbV/zmz8FwIIX903473XEd/9Yc3FxMXljLutgvsS+DfBHsIzx/MlmP2jKtBMDw6HoGgTJaWePX0S9TTjSjCB3POD7n7N4fDwZcGg2rXuYV1fvjy5V8fwKzcAAeBJ939YfDt7gnz/p0GJZSRUAQCEEWIQWm6mgtXLuEY7oaIE4JuDyE8HEJ4sqyKg6PRPBdXm/cO4MJSvvZ4H/CEiHw8ZxMzEA0EjYTQXyqBGCIxRlSEWAS277qB+WHFIJYUMRJCIMZIjFGqqvx4UH1iNB/vGwxLXltY/eUALk8yOKhyCHgM2K8qiAg5G7iiWiBELAfMFJFAKApiCKS2YfHM65QXr3Dq6e/Q1TWqEVVFVTFzptNm/8akfuzi+cVDXW2cPPuzd0EoolRDduXsj7r7re4zhMbQBwC4g7sj0j9nc2JQpCo584OTnPzGtzi/uMCl//g6U8l88nPHUFW6rqNparouk5LdmlN+1NyOAZcA9O2po4q680URDocgqApmjhmo6iwAx8yA/t42iS4ZiPDKuVc4ubHAG9Jwur3Cf7/6IuQOT4mcEl2XqOuaelrTdd1h3L+4abxJT75yGXUHMz/o7g+6gfUJz8DoOP5OAL84XAQQRBTmC+YGAavXqKKx/YbttE3LZLpBSgl3SJ3Rdena9webpjkoIqi7qZl/3rLvMHPcZxcZVScG0NBXIoSAiBBjoCojISgI3HvkKHd99DcZV5G9O3dy3+/cR90m6qal6TrM8qxymZwzKaUdOafP796zXRXkVhG5f5bnLH1HFUT7fkNPKw2OBnqKKchs0l27P8D+2+6YYSZTFiUIZMt0bUtTd5j5jBmBoogMh9X9qysbt0YRjrpzsyqYyYwNPQP6SjhY3wxmIEQdQXAXICDAoBpQhoJgMJ1uUJUF5k7XdTNtcMqyYH48AnfM7eb19enRKMoRcaKZoOJkcXABuYYDcHEsGSklQlRC0Bk2FEFQVYq5OUSctfU16m7KaDxiMDdH07SsrqyRkyGqpC7Rth0555jNjkQ1P2DSZ20IQejBRY8FzMldom06zJ2U6DUgBFSVGAOiSlGWFGWBamSyvk4IJSJGCBERxVmmbTrWu0TqOnLO5JwPxELZmazvtQowQzfm5Jxp20RqWqzL/R8KxT3TdT1duqQMvBekQiNrK6usLC/ibuB9FQeDis2bN7GyssrGpCbNqNl1vjNqYFSGnn6Cw0xoXAQ3pYiBroWmbRgOBqiBq5PEmFGYtnWCBjwoVIHJZELXdTPZ7tVwMByQcqaeNnRdZjpNNF0exbZ2Yqmo9on34HLMhaKINHXN6Ref45lnvocDdx74CL918G7CoMIM3DKWHQ2RYVmSloXVxSU2NjZQjbNW9fOqQYwRQckZupSIly4vT67fMj8eDiOi1u94MxY0zZR//qe/49++9hVWlpZJOTE/nufYH/8pf/bnf00oSrIZIlCVJQThSrPG+nSNtmkI0ZlMpuSUMOtBPJ22dF3G3HD3Sby6tL6QUhqPRxUa+oWHw4L58ZAfPfcsX/3Xx1i8ungNlqwsLfPkE49z7+FPcvDuw4h0lEXBoBowrCo+fOMucj1leXmF0WgzOWc2NjZo2xZ3J2clu2MYIrqgmzaVp+fnCwYDpaoCRRFwV3A4feoUS4uL4DPOu4Irq8vL/PilU7gZQaBrOpReKV89/xOuLi2ytrrKdDql67p3VNTMEXGKqMwNKubnBqfjnp3XnSiK8IAEjY7jBk1jTCYdLhHVApMS3HHvcMtUGpgvI0ivBil1uCtFWXDdjuupqoqmngKQc+51oihmu6lQViVFLFI2OxGHo8FxhwvgH3KcZJm6bqk7Z8eNexjvuJ2VlQ3cEioBbS+ze/uYfbfdgQNlFSlUqScFw+GYXdUWbDIle2IwLDEziqIg5/4+GJSM5oeohgvuHI8GZwWeFviCJWfp52s8//wpXjj1PG+eP0/T1OAGnvFizHB8C/tv38r4ui3MlZGyLGHgXH275SN33MXSDXtou46NxUXyzS3z4zGDuQExBJq6pgq9nTN4um7SWVltWkT0Y13T/ufp0y/veOqpr3P8O//FT39yjpyBchtCQlSg2EyQRarSuemmm/j0p36Pzx17kFE54KVvfIuFF1/hlQvnGIaCTaPN7Lr3Hu789KcoypLhoKSMAQXc/O2U0u8Dz8Z2UrN1y/jkY099+/GvfPnvH3nrjTOsLa6SckK0QGMFXuH1ApoXGc6NEAu8fvYs//jjsxz//lk+cegeJj/4NucvvsHP2nXcnWDGzotnuP7229i5Zy/TaUMRIiJCEeTxLaNwctI4AhB23IFL3FVOz/+7pPpwbjIm1wyIz/aGXkT27r2F+evGvPDCi6SwFY/bKOfm2b9tRKVXqb0jpZamnjIXS/7ikb/lwF330DQdKTkC3yur8pi7X/rEb+/pPaGtLjDW6aVOioct+dccv/Vd7yPvfFrKvP76axRlCaGAMI/gtKuXeC0PuGn3ZgbRCVlIksijMVtvvIFBFWnblq5rz3Ztfnhjo77U1L0LDwCkKV0yRPJFM3sZ4W5g6zshyDX/7OSZoonnHhceEWvI059DrpkbKFEy0+kyhw4e4g8fOEaUCCqvisoX9t5y0zOLi4t85nfv/IUAZu5PRDCz86r6LHAbsEcEce87IfpuS3ADyYhrH4w1aCwYzUVu3/dhqrLir/7yb9ixfZen5N/P2EN7tm57ZuHqVY5+bP97n4xSSqgq7vkk+GdV5VFVuaIBVHpnhF8zq+C5gbwO3uCe8ZzJQFEN2bxpE5P11SsxhEdx++ymsjx5ZXWFuw/s+SVzG/iVYWaYOUUR11Tlu46fAM+IbwPmcVW55ogBPINW4B2ejWK0KYnUb3Zd9+RkY/WRP/rMHzyRLa9+YPf1fPlf/uH/nA3f93TcNB1ALiv9IfAjYB9wVOAIzgFgJzBCHLFm4uhCzu3pleXpieWt8fidv3HLuTfeejVds3XvN/4XMgBoiblqHpYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDktMjBUMDU6NTE6NTArMDA6MDDj6dhjAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTA5LTIwVDA1OjUxOjUwKzAwOjAwkrRg3wAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==" />
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACylBMVEUAAADj7/3R3evk8P7f6/j3/v/k8P3S3e0GBge0vtYBAwIEBATS2enZ5+cICAbX2+Lk8P7j7/zh7fje5vTb4vHU3Oytt8fK1ebV4fHQ3Ovj7/3i7vzi7vrW4vDZ5fPj7/rl8f3j7/3b5/TQ2uvs+f/o9f7F0eLK1ufo9f7m8/7BzN7K1ufo9f7P2+rq9/6+ytvw+f6tuc/m7feksMrU3Oqpts7v9vnL1+f3/v/Z4OPe5vLf6fT///9FTVHK0+bl6PMFBQcFBATDzeCwu9UEBAQFBQQFBQR9gnzb4e7P2OgICAYHBwMGBQMFAwQFBAMFBgkGCA0mLipeY1jv8/7f7Pbe6vTc5vHU3+uVnqvF0N/i7vzh7fri7/rg7fnh7ffY4eyPi5i4ucnb5/Xe6vfl8f7j7/3f6/rh7vu9wMtMRFFnZ3LX4u/W4vDK1eXl8f3j8Pzg7PrCzNRJUFFpcnbQ2ufO2ujBzN3m8v3k8fzm8vzl8fvk8Pvj8Prj8Pvg7PZxdXeAg4jR3OrH0+LCzd/J1eXo9f7n8/3n9P3k7/ne6fTe6vXi7vt5foF2en3f6vfW4vHG0uPF0OHv+P7s9P3i6fTU2ubb5O/Z5fHb6PJ/g4ZqbW/c6PXj7/zV4O+8x9nv9vvx+fzq8faJjpFIS0t/hIfR3eeFiYxfYWLM1+XU3+/O2em4w9ji6fLq8fnAxskVFhMAAAATFBKut7/d5/aOkZVWVlW4wtG4w9WxvdPz+vzt9PustL0SGCIDCBQcGRu2u8Ph6/iZnaJcW1uxvMnH0+PDzt+Gi5E+Q0kLEyQFDiEhJiqJkJLS2OCkkZx0W2SckJ3O2efZ5PEODw4CAgMFCBAJCgsaHRoNFRg1P1ZIN0QzJidANTevtsTG0eUEBAQEBAMGBQQLCwoGDBUBDCMTHCQqMitAS0S+x9IFBQMFBgcECBIKDRE1OjL///9awiltAAAAVHRSTlMAAAAAAAAAAAAAAAAAAAAAB0in5Pv75KdIBxiS7u6SGBixsRgGkpIGSe3tSaen4+P7+/v74+Onp0nt7UkGkpIGGLGxGBiS7u6SGAdIp+T7++SnSAd/frJyAAAAAWJLR0Q8p2phzwAAAAd0SU1FB+YJFAUzMuTVBt0AAAEbSURBVBjTARAB7/4AAAABEBESExQVFhcYGQIAAAADARobHFRVVldYWR0eHwQFAAYgIVpbXF1eX2BhYmMiIwcAJCVkZVpaZmdoaWprbG0mJwAoKW5vb1pwZ3Fyc3R1diorACx3eHl6e3x9fn+AgYKDhC0ALoWGh4iJil2LjI2Oj5CRLwAwkpKTlJWWl5iZmpucnZ4xADKfoKGio6SlbKanqKmqqzMANKytrq+wsbKztLW2g7e4NQA2ubq7vL2+v8DBwsPExcQ3ADg5xsfIycrLzM3Oz9DROjsAPD3S09TV1tfY2drb3N0+PwAIQEHe3+Dh4uPk5ebnQkMJAAoLREVG6N/p6uvsR0hJDA0AAAAOSktMTU5PUFFSUw8AABA4cqUVPlYcAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA5LTIwVDA1OjUxOjUwKzAwOjAw4+nYYwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wOS0yMFQwNTo1MTo1MCswMDowMJK0YN8AAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.b9430b3218bf6da78730.css"></head>
-<body>
-  <app-root></app-root>
-<script src="runtime-es2015.cb1017440692b8214223.js" type="module"></script><script src="polyfills-es2015.7a264d14fd7126ba8db0.js" type="module"></script><script src="runtime-es5.9ea29f041c85c17d4f3e.js" nomodule></script><script src="polyfills-es5.2219c87348e60efc0076.js" nomodule></script><script src="main-es2015.082403528e2c9b5e4d4c.js" type="module"></script><script src="main-es5.ce296acce11674373285.js" nomodule></script></body>
+    <meta
+      name="keywords"
+      content="Weibin Luo,Amabel,Profile,Developer,Engineer"
+    />
+    <meta name="title" content="Amabel's Profile" />
+    <meta
+      name="description"
+      content="Weibin Luo is a full-stack engineer with experience in software development, including requirements analysis, architecture design, programming, operations, and maintenance."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- ogp -->
+    <meta property="og:url" content="https://amabel.dev" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Weibin" />
+    <meta property="profile:last_name" content="Luo" />
+    <meta property="profile:gender" content="male" />
+    <meta property="profile:username" content="Amabel" />
+    <meta property="og:title" content="Amabel's Profile" />
+    <meta
+      property="og:description"
+      content="Weibin Luo is a full-stack engineer with experience in software development, including requirements analysis, architecture design, programming, operations, and maintenance."
+    />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/12688422?v=4"
+    />
+    <meta
+      property="og:image:url"
+      content="https://avatars.githubusercontent.com/u/12688422?v=4"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://avatars.githubusercontent.com/u/12688422?v=4"
+    />
+    <meta property="og:image:alt" content="Amabel's avatar" />
+    <meta property="og:image:width" content="460" />
+    <meta property="og:image:height" content="460" />
+    <title>Amabel's Profile</title>
+    <script type="module" crossorigin src="/assets/index.0e90edbd.js"></script>
+    <link rel="stylesheet" href="/assets/index.d48e3127.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    
+  </body>
 </html>
